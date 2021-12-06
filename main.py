@@ -1,66 +1,40 @@
 """
-Data Types
+///Loops
+1. For Loop
 
-Integer -> int -> 10
-Double/Float -> float -> 10.23
-Character -> char
-String -> str -> 'This is String' (String is basically a set of Characters)
-Boolean -> bool -> True/False
-"""
+for <variable> in range([startingValue], limiting Value, [increment/decrement]):
+    <body>
 
-"""
-Casting
-
-int() -> to cast other data types to integer datatype
-float() -> to cast other data types to Float datatype
-str() -> to cast other data types to String datatype
-"""
-
-"""
-Arithmetical Operator
-
-+ , - , *, / , % , ** , //
-
-Logical Operator
-
-and or not  
-
-Assignment Operator
-
-= , +=, -= , *=, /=, %=
-
-Comparison Operator
-
-== , != , > , < , >= , <=
-
-"""
-
-"""
-Conditional Statements
-
-//if else elif  (Conventional Way)
-
-if <Condition>:
-    body
-elif <Condition>:
-    body
+for <variable> in <A set of data>:
+    <body>
 else:
-    body
-     
-     
-//Shortcut/Ternary Operator/ConditionExpression
+    <else body works only when the loop breaks>
 
-<body if true> if <condition> else <body if false> 
+//remember these keywords
+break
+pass
+continue
+
+2. While Loop
+
+i = 0  -> STEP 1 Initialization
+
+while <Condition>:  -> STEP 2 Condition
+    <body>          -> STEP 3 body
+
+    <increment>     -> STEP 4 Update/Increment/Decrement
+
+
+
+HW -> Solve 1018 and 1019 no problem from beecrowd.com.br
 """
 
-number = 35
 
-if number<30:
-    print('less then 30')
-elif number<40:
-    pass
-elif number<50:
-    print('less then 50')
-else:
-    print('Greater than 50')
 
+
+
+
+for i in range(5):
+    if i == 3:
+        continue
+    print(i)
