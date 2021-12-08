@@ -1,40 +1,72 @@
 """
-///Loops
-1. For Loop
+///List //ArrayList
 
-for <variable> in range([startingValue], limiting Value, [increment/decrement]):
-    <body>
+Lists are dynamically changeable
+in List we can store duplicate values
+<listName> = [<index 0>, <index 1>, .... ,<index N>]
 
-for <variable> in <A set of data>:
-    <body>
-else:
-    <else body works only when the loop breaks>
+append(<Val>) //Adds items to the list
+insert(<index>,<Val>) //Adds items to specific index in the list
+pop(<index>) //Removes specific indexed value from the list
+remove(<Val>) //Removes specific value from the list
 
-//remember these keywords
-break
-pass
-continue
+names = ['Sartaj']
+names.append('Neelavro') # ['Sartaj', 'Neelavro']
+names.append('Neelavro') # ['Sartaj', 'Neelavro']
+names.append('Neelavro') # ['Sartaj', 'Neelavro']
+names.append('Umama') # ['Sartaj', 'Neelavro', Umama]
 
-2. While Loop
+names.insert(2,'Shafin')
 
-i = 0  -> STEP 1 Initialization
+names.pop(4)
 
-while <Condition>:  -> STEP 2 Condition
-    <body>          -> STEP 3 body
+names.remove('Neelavro')
 
-    <increment>     -> STEP 4 Update/Increment/Decrement
-
+print(names)
 
 
-HW -> Solve 1018 and 1019 no problem from beecrowd.com.br
+
+///Tuple
+<tupleName> = (<index 0>, <index 1>, .... ,<index N>)
+
+Tuples are not changeable like list
+in Tuples we can store duplicate values
+
+
+///Sets
+<tupleName> = {<index 0>, <index 1>, .... ,<index N>}
+
+Sets are not changeable like list
+in Sets we can't store duplicate values
+
+
+///Dictionary //HashMap
+Dictionary is the fast setDataType
+has the fastest time complexity
+more readable than list
+
+<dictionaryName> = {<key>:<value>, <key>:<value>, ..... ,<key>:<value>}
+
+//new entry
+<dictionaryName>['newKeyName'] = <val>
+
+//update existing value
+<dictionaryName>.update({<keyName>: <newValue>})
+
+//remove a specific pair
+<dictName>.pop(<keyname>)
+//remove last pair
+<dictName>.popitem()
+
+
+////HW problem 1021 -> using while loop only
 """
 
+userData = {'id':1, 'name':'Sartaj', 'height':5.7}
 
+userData['phone'] = 8801796406262
+userData.update({'full_name': 'Sartaj'})
 
+userData.popitem()
 
-
-
-for i in range(5):
-    if i == 3:
-        continue
-    print(i)
+print(userData)
