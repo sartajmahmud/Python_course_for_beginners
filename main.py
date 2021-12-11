@@ -1,72 +1,110 @@
 """
-///List //ArrayList
+///Nested Conditions
+Example problem:
+    find leap year using nested condition
 
-Lists are dynamically changeable
-in List we can store duplicate values
-<listName> = [<index 0>, <index 1>, .... ,<index N>]
+solution:
+    x=int(input())
 
-append(<Val>) //Adds items to the list
-insert(<index>,<Val>) //Adds items to specific index in the list
-pop(<index>) //Removes specific indexed value from the list
-remove(<Val>) //Removes specific value from the list
-
-names = ['Sartaj']
-names.append('Neelavro') # ['Sartaj', 'Neelavro']
-names.append('Neelavro') # ['Sartaj', 'Neelavro']
-names.append('Neelavro') # ['Sartaj', 'Neelavro']
-names.append('Umama') # ['Sartaj', 'Neelavro', Umama]
-
-names.insert(2,'Shafin')
-
-names.pop(4)
-
-names.remove('Neelavro')
-
-print(names)
+    if x%4==0:
+        if x%100==0:
+            if x%400==0:
+                print("leap year")
+            else:
+                print("not leap year")
+        else:
+            print("leap year")
+    else:
+        print("not leap year")
 
 
+Practice problems:
+P1:
+*****
+  *
+  *
+  *
+*****
 
-///Tuple
-<tupleName> = (<index 0>, <index 1>, .... ,<index N>)
+P2:
+*****
+*   *
+*   *
+*   *
+*****
 
-Tuples are not changeable like list
-in Tuples we can store duplicate values
+P3:
+*   *
+*   *
+*****
+*   *
+*   *
 
-
-///Sets
-<tupleName> = {<index 0>, <index 1>, .... ,<index N>}
-
-Sets are not changeable like list
-in Sets we can't store duplicate values
-
-
-///Dictionary //HashMap
-Dictionary is the fast setDataType
-has the fastest time complexity
-more readable than list
-
-<dictionaryName> = {<key>:<value>, <key>:<value>, ..... ,<key>:<value>}
-
-//new entry
-<dictionaryName>['newKeyName'] = <val>
-
-//update existing value
-<dictionaryName>.update({<keyName>: <newValue>})
-
-//remove a specific pair
-<dictName>.pop(<keyname>)
-//remove last pair
-<dictName>.popitem()
-
-
-////HW problem 1021 -> using while loop only
 """
 
-userData = {'id':1, 'name':'Sartaj', 'height':5.7}
 
-userData['phone'] = 8801796406262
-userData.update({'full_name': 'Sartaj'})
 
-userData.popitem()
 
-print(userData)
+"""
+
+//Nested Loops
+
+    column -> 1
+    row -> 0
+    output : *
+
+    column -> 2
+    row -> 0, 1
+    output : **
+
+    column -> 3
+    row -> 0, 1, 2
+    output : ***
+    
+    column -> 4
+    row -> 0, 1, 2, 3
+    output : ****
+    
+    column -> 5
+    row -> 0, 1, 2, 3, 4
+    output : *****
+
+    example 1:
+    
+    *
+    **
+    ***
+    ****
+    *****
+    
+    solution :
+    for column in range(1,6):
+        for row in range(column):
+            print('*', end='')
+    print()
+
+    //Practice problems for nested loop
+    practice 1:
+    *****
+    ****
+    ***
+    **
+    *
+
+    practice 2:
+    *****
+     ****
+      ***
+       **
+        *
+
+    practice 3:
+        *
+       **
+      ***
+     ****
+    *****
+    
+
+
+"""
