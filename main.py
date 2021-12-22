@@ -1,73 +1,84 @@
-# patternLength = int(input())
+# """
+# Encapsulcation
+#
+# 1. Getter functions/methods
+# 2. Setter function/methods
+# """
+#
+#
+# class Person:
+#
+#     def __init__(self,name, address, phonenumber = None):
+#         self.name = name
+#         self.address = address
+#         self.phoneNumber = phonenumber
+#
+#
+#     def printData(self):
+#         print("Name is the object : ",self.name)
+#         print("Address is the object : ",self.address)
+#         print("PhoneNumber is the object : ",self.phoneNumber)
+#
+#     def getPhoneNumber(self):
+#         return self.phoneNumber
+#
+#     def setPhoneNumber(self, newPhoneNumber):
+#         self.phoneNumber = newPhoneNumber
+#
+#
+# person1 = Person('saaaad','kamala',123)
+# # person2 = Person('sajjad','lalmaa',123465)
+#
+# #
+# # person1.phoneNumber = 123456789
+# # person2.phoneNumber = 987654321
+#
+# print(person1.getPhoneNumber())
+#
+# person1.setPhoneNumber(654321)
+#
+# print(person1.getPhoneNumber())
+#
+# # Person('Umama','Dhanmondi',123).printData()
+# #
+# # person1.printData()
+# #
+# # person2.printData()
+#
 
-# for column in range(1, patternLength+1):
-#     for row in range(column):
-#         print('*', end='')
-#     print()
 
-# for column in range(1, patternLength+1):
-#     for spaceRow in reversed(range(1,(patternLength+1)-column)):
-#         print(' ', end='')
-#     for row in range(column):
-#         print('*', end='')
-#     print()
+# x = 10
+#
+# def getX():
+#     return x
+#
+# def setX(value):
+#     global x
+#     x = value
+#
+#
+# setX(200)
+#
+# print(getX())
 
-# for row in range(1,patternLength+1):
-#     if row==1 or row==patternLength:
-#         for col in range(1,patternLength+1):
-#             print("*",end="")
-#     else:
-#         for col in range(1, patternLength + 1):
-#             if col == (patternLength + 1)/2:
-#                 print("*", end="")
-#             else:
-#                 print(" ",end="")
-#     print()
+import Person
 
+# Method Overloading
 
-#neelavro problem
-# for i in range(1, patternLength+1):
-#     print(i,end='')
-# for i in reversed(range(1, patternLength)):
-#     print(i,end='')
+person1 = Person.Person('Sartaj', 'Uttara')
+person2 = Person.Person('Neelavro', 'Shankar', 7689)
 
-for row in range(1, 6):
-    for space in range(1,6 - row):
-        print("_", end="")
-    for star in range(1, row+1):
-        print("*", end='')
-    print()
+# print(person1.name)
+# print(person1.address)
+# print(person1.phoneNumber)
+#
+# print(person2.name)
+# print(person2.phoneNumber)
 
 
+def addValues(num1, num2, num3=0):
+    return num1+num2+num3
 
-    """
-    5
-    123454321
-    
-    
-    ***** -> 1
-    *   *
-    *   *
-    *   *
-    ***** -> 5
-    
-    
-    practice 3:
-        **
-       ****
-      ******
-     ********
-    **********
-    **********
-     ********
-      ******
-       ****
-        **
-    
-     practice 1:
-    *****
-     ****
-      ***
-       **
-        *
-    """
+print(addValues(5,5))
+print(addValues(5,5,10))
+
